@@ -1,0 +1,5 @@
+RemoveHandler .html .htm
+AddType application/x-httpd-php .php .htm .html .phtml
+
+RewriteEngine on
+RewriteRule ^([A-Za-z0-9-]+)$ index.html?r=$1
