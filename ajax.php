@@ -22,7 +22,7 @@
 			
 			$stmt=$pdo->query("SELECT COUNT(*) AS LLL FROM links l WHERE l.NewLink='".$e."'");
 			$row = $stmt->fetch();
-			if($row['LLL']==0) //если ссылка уже есть в базе, выводим соответсвующее сообщение
+			if($row['LLL']==0) //если ссылка уже есть в базе, выводим соответствующее сообщение
 			{
 				$pdo->query("INSERT links (NewLink, Link) VALUES ('".$e."', '".$q."')"); //добавляем в базу
 				$pdo->query("UPDATE counter c SET c.Counter=c.Counter+1"); //увеличиваем счётчик
