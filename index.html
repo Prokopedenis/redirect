@@ -19,10 +19,10 @@
 		die();
 	}
 	
-	if(isset($_GET['r']))
+	if(isset($_GET['r'])) // переход по ссылке
 	{
 		$link=$_GET['r'];
-		$stmt = $pdo->query("SELECT l.Link FROM links l WHERE l.NewLink='".$link."'"); //добываем счётчик
+		$stmt = $pdo->query("SELECT l.Link FROM links l WHERE l.NewLink='".$link."'");
 			while ($row = $stmt->fetch())
 			{
 				$redir=$row['Link'];
